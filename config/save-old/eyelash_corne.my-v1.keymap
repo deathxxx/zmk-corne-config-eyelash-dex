@@ -41,13 +41,11 @@
     /* TRI-LAYER:
      * hold layer 1 + layer 2 => enable layer 3
      */
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        adjust_layer_trigger {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
+    tri_layer {
+        compatible = "zmk,tri-layer";
+        lower-layer = <1>;
+        upper-layer = <2>;
+        tri-layer = <3>;
     };
 
     rgb_encoder: rgb_encoder {
